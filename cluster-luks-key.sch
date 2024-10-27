@@ -1,0 +1,233 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr USLetter 11000 8500
+encoding utf-8
+Sheet 1 1
+Title "Cluster LUKS Key"
+Date "2019-12-26"
+Rev "v01"
+Comp "Brian Salcedo"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L cluster-luks-key:STM32G030J6Mx U1
+U 1 1 5EB1D020
+P 6850 3600
+F 0 "U1" H 7078 3596 50  0000 L CNN
+F 1 "STM32G030J6Mx" H 7078 3505 50  0000 L CNN
+F 2 "Package_SO:SO-8_3.9x4.9mm_P1.27mm" H 6850 3650 50  0001 C CNN
+F 3 "" H 6850 3650 50  0001 C CNN
+	1    6850 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C1
+U 1 1 5EB1D4FB
+P 7250 3100
+F 0 "C1" H 7342 3146 50  0000 L CNN
+F 1 "4.7uF" H 7342 3055 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 7250 3100 50  0001 C CNN
+F 3 "~" H 7250 3100 50  0001 C CNN
+	1    7250 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C2
+U 1 1 5EB1D6E1
+P 7650 3100
+F 0 "C2" H 7742 3146 50  0000 L CNN
+F 1 "0.1uF" H 7742 3055 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 7650 3100 50  0001 C CNN
+F 3 "~" H 7650 3100 50  0001 C CNN
+	1    7650 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR06
+U 1 1 5EB20AF0
+P 7250 3300
+F 0 "#PWR06" H 7250 3050 50  0001 C CNN
+F 1 "GND" H 7255 3127 50  0000 C CNN
+F 2 "" H 7250 3300 50  0001 C CNN
+F 3 "" H 7250 3300 50  0001 C CNN
+	1    7250 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR07
+U 1 1 5EB20D16
+P 7650 3300
+F 0 "#PWR07" H 7650 3050 50  0001 C CNN
+F 1 "GND" H 7655 3127 50  0000 C CNN
+F 2 "" H 7650 3300 50  0001 C CNN
+F 3 "" H 7650 3300 50  0001 C CNN
+	1    7650 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR05
+U 1 1 5EB20F64
+P 7250 2800
+F 0 "#PWR05" H 7250 2650 50  0001 C CNN
+F 1 "+3.3V" H 7265 2973 50  0000 C CNN
+F 2 "" H 7250 2800 50  0001 C CNN
+F 3 "" H 7250 2800 50  0001 C CNN
+	1    7250 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR04
+U 1 1 5EB21643
+P 6950 4600
+F 0 "#PWR04" H 6950 4350 50  0001 C CNN
+F 1 "GND" H 6955 4427 50  0000 C CNN
+F 2 "" H 6950 4600 50  0001 C CNN
+F 3 "" H 6950 4600 50  0001 C CNN
+	1    6950 4600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7650 3200 7650 3300
+Wire Wire Line
+	7650 3000 7650 2900
+Wire Wire Line
+	7650 2900 7250 2900
+Wire Wire Line
+	7250 2900 7250 2800
+Wire Wire Line
+	7250 3000 7250 2900
+Connection ~ 7250 2900
+Wire Wire Line
+	7250 2900 6950 2900
+Wire Wire Line
+	6950 2900 6950 3200
+$Comp
+L Device:R_Small_US R1
+U 1 1 5EB2209E
+P 6400 4100
+F 0 "R1" H 6332 4054 50  0000 R CNN
+F 1 "1K" H 6332 4145 50  0000 R CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 6400 4100 50  0001 C CNN
+F 3 "~" H 6400 4100 50  0001 C CNN
+	1    6400 4100
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED_Small D1
+U 1 1 5EB23070
+P 6400 4400
+F 0 "D1" V 6446 4332 50  0000 R CNN
+F 1 "Blue" V 6355 4332 50  0000 R CNN
+F 2 "LED_SMD:LED_0603_1608Metric" V 6400 4400 50  0001 C CNN
+F 3 "~" V 6400 4400 50  0001 C CNN
+	1    6400 4400
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR03
+U 1 1 5EB23AA3
+P 6400 4600
+F 0 "#PWR03" H 6400 4350 50  0001 C CNN
+F 1 "GND" H 6405 4427 50  0000 C CNN
+F 2 "" H 6400 4600 50  0001 C CNN
+F 3 "" H 6400 4600 50  0001 C CNN
+	1    6400 4600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6400 4200 6400 4300
+Wire Wire Line
+	6400 4500 6400 4600
+Text Label 5950 3400 0    50   ~ 0
+USART1_RX
+Wire Wire Line
+	6400 4000 6400 3700
+Wire Wire Line
+	6400 3700 6500 3700
+Text Label 5950 3900 0    50   ~ 0
+USART1_TX
+Wire Wire Line
+	6500 3400 5950 3400
+Wire Wire Line
+	6500 3900 5950 3900
+Wire Wire Line
+	6500 3500 5950 3500
+Wire Wire Line
+	6500 3600 5950 3600
+Wire Wire Line
+	6500 3800 5950 3800
+Wire Wire Line
+	6400 3700 5950 3700
+Connection ~ 6400 3700
+Text Label 5950 3500 0    50   ~ 0
+PF2
+Text Label 5950 3600 0    50   ~ 0
+PB0
+Text Label 5950 3700 0    50   ~ 0
+PA12
+Text Label 5950 3800 0    50   ~ 0
+PA13
+$Comp
+L Connector_Generic:Conn_02x05_Odd_Even J1
+U 1 1 5EB3232E
+P 4800 3700
+F 0 "J1" H 4850 4117 50  0000 C CNN
+F 1 "PI-2 Bus" H 4850 4026 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_2x05_P2.54mm_Horizontal" H 4800 3700 50  0001 C CNN
+F 3 "~" H 4800 3700 50  0001 C CNN
+	1    4800 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR01
+U 1 1 5EB3343A
+P 4500 3400
+F 0 "#PWR01" H 4500 3250 50  0001 C CNN
+F 1 "+3.3V" H 4515 3573 50  0000 C CNN
+F 2 "" H 4500 3400 50  0001 C CNN
+F 3 "" H 4500 3400 50  0001 C CNN
+	1    4500 3400
+	1    0    0    -1  
+$EndComp
+NoConn ~ 4600 3600
+NoConn ~ 4600 3700
+NoConn ~ 4600 3800
+NoConn ~ 5100 3500
+NoConn ~ 5100 3600
+Text Label 5700 3800 2    50   ~ 0
+USART1_RX
+Text Label 5700 3900 2    50   ~ 0
+USART1_TX
+Wire Wire Line
+	5100 3800 5700 3800
+Wire Wire Line
+	5100 3900 5700 3900
+Wire Wire Line
+	5100 3700 5200 3700
+Wire Wire Line
+	5200 3700 5200 4000
+$Comp
+L power:GND #PWR02
+U 1 1 5EB37445
+P 5200 4000
+F 0 "#PWR02" H 5200 3750 50  0001 C CNN
+F 1 "GND" H 5205 3827 50  0000 C CNN
+F 2 "" H 5200 4000 50  0001 C CNN
+F 3 "" H 5200 4000 50  0001 C CNN
+	1    5200 4000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4600 3500 4500 3500
+Wire Wire Line
+	4500 3500 4500 3400
+Wire Wire Line
+	6950 4100 6950 4600
+Wire Wire Line
+	7250 3200 7250 3300
+NoConn ~ 4600 3900
+$EndSCHEMATC

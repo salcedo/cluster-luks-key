@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name cluster-luks-key)(type Legacy)(uri ${KIPRJMOD}/cluster-luks-key.lib)(options "")(descr ""))
+  (lib (name cluster-luks-key-rescue)(type Legacy)(uri ${KIPRJMOD}/cluster-luks-key-rescue.lib)(options "")(descr ""))
+)
